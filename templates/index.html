@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator App</title>
+</head>
+<body>
+    <h1>Calculator App</h1>
+    
+    <!-- Multiplication -->
+    <h2>Multiplication</h2>
+    <input type="number" id="mulNum1" placeholder="Enter first number">
+    <input type="number" id="mulNum2" placeholder="Enter second number">
+    <button onclick="multiplyNumbers()">Multiply</button>
+    <p id="mulResult"></p>
+
+    <!-- Addition -->
+    <h2>Addition</h2>
+    <input type="number" id="addNum1" placeholder="Enter first number">
+    <input type="number" id="addNum2" placeholder="Enter second number">
+    <button onclick="addNumbers()">Add</button>
+    <p id="addResult"></p>
+
+    <!-- Subtraction -->
+    <h2>Subtraction</h2>
+    <input type="number" id="subNum1" placeholder="Enter first number">
+    <input type="number" id="subNum2" placeholder="Enter second number">
+    <button onclick="subtractNumbers()">Subtract</button>
+    <p id="subResult"></p>
+
+    <script>
+        function multiplyNumbers() {
+            const num1 = parseInt(document.getElementById('mulNum1').value, 10); // Convert to integer
+            const num2 = parseInt(document.getElementById('mulNum2').value, 10); // Convert to integer
+
+            if (!isNaN(num1) && !isNaN(num2)) {
+                const result = num1 * num2;
+                document.getElementById('mulResult').innerText = `Result: ${result}`;
+            } else {
+                alert('Please enter valid numbers for multiplication.');
+            }
+        }
+
+        function addNumbers() {
+            const num1 = parseInt(document.getElementById('addNum1').value, 10); // Convert to integer
+            const num2 = parseInt(document.getElementById('addNum2').value, 10); // Convert to integer
+
+            if (!isNaN(num1) && !isNaN(num2)) {
+                const result = num1 + num2;
+                document.getElementById('addResult').innerText = `Result: ${result}`;
+            } else {
+                alert('Please enter valid numbers for addition.');
+            }
+        }
+
+        function subtractNumbers() {
+            const num1 = parseInt(document.getElementById('subNum1').value, 10); // Convert to integer
+            const num2 = parseInt(document.getElementById('subNum2').value, 10); // Convert to integer
+
+            if (!isNaN(num1) && !isNaN(num2)) {
+                const result = num1 - num2;
+                document.getElementById('subResult').innerText = `Result: ${result}`;
+            } else {
+                alert('Please enter valid numbers for subtraction.');
+            }
+        }
+    </script>
+</body>
+</html>
