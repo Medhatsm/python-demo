@@ -3,14 +3,14 @@
 # VAR=$VAR" WORLD"
 # echo $VAR
 rm -rf file*.py
-FILES_NUMBER=60
+FILES_NUMBER=100
 for (( c=1; c<=$FILES_NUMBER; c++ ))
 do 
 SCRIPT=""
 FILE="file${c}.py"
 touch $FILE
 
-   for (( n=1; n<=99; n++))
+   for (( n=1; n<=199; n++))
    do
     K=$(($n + 1))
     SCRIPT=$SCRIPT"def method"$n"():\n
