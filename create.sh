@@ -4,18 +4,19 @@
 # echo $VAR
 rm -rf file*.py
 FILES_NUMBER=100
+METHODS_NUMBER=199
 for (( c=1; c<=$FILES_NUMBER; c++ ))
 do 
 SCRIPT=""
 FILE="file${c}.py"
 touch $FILE
 
-   for (( n=1; n<=199; n++))
+   for (( n=1; n<=$METHODS_NUMBER; n++))
    do
     K=$(($n + 1))
     SCRIPT=$SCRIPT"def method"$n"():\n
 \tmethod"$K"()\n"
-    if [ $n -eq 199  ] && [ $c != $FILES_NUMBER ]
+    if [ $n -eq $METHODS_NUMBER  ] && [ $c != $FILES_NUMBER ]
     then
     D=$(($c + 1))
     SCRIPT=$SCRIPT"def method"$K"():\n
@@ -23,7 +24,7 @@ touch $FILE
     "
     fi
 
-    if [ $n -eq 199 ] && [ $c -eq $FILES_NUMBER ]
+    if [ $n -eq $METHODS_NUMBER ] && [ $c -eq $FILES_NUMBER ]
     then
     SCRIPT=$SCRIPT"def method"$K"():\n
 \tprint(\"last method called from file"$c"\")\n
