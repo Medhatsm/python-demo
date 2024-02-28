@@ -197,6 +197,5 @@ def method98():
 def method99():
  	method100()
 def method100():
- 	from file3 import method1
- 	method1()
+ 	print("last method called from file2")
 

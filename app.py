@@ -1,11 +1,15 @@
 from flask import Flask, request, jsonify, render_template
-
+import importlib
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    from file1 import method1
-    method1()
+    for i in range(1, 61):
+        module_name = f"file{i}"
+        module = importlib.import_module(module_name)
+        method1 = getattr(module, "method1")
+        method1()
+
     return render_template('index.html')
 
 @app.route('/calculate', methods=['POST'])

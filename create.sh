@@ -3,7 +3,7 @@
 # VAR=$VAR" WORLD"
 # echo $VAR
 rm -rf file*.py
-FILES_NUMBER=5
+FILES_NUMBER=60
 for (( c=1; c<=$FILES_NUMBER; c++ ))
 do 
 SCRIPT=""
@@ -19,15 +19,15 @@ touch $FILE
     then
     D=$(($c + 1))
     SCRIPT=$SCRIPT"def method"$K"():\n
-\tfrom file"$D" import method1\n
-\tmethod1()\n
+\tprint(\"last method called from file"$c"\")\n
     "
     fi
 
     if [ $n -eq 99 ] && [ $c -eq $FILES_NUMBER ]
     then
     SCRIPT=$SCRIPT"def method"$K"():\n
-\tprint(\"finish\") \n"
+\tprint(\"last method called from file"$c"\")\n
+\tprint(\"finish\")\n "
     fi
     done
    
