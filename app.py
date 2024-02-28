@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    for i in range(1, 61):
+    for i in range(1, 101):
         module_name = f"file{i}"
         module = importlib.import_module(module_name)
         method1 = getattr(module, "method1")

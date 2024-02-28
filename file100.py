@@ -197,9 +197,6 @@ def method98():
 def method99():
  	method100()
 def method100():
- 	print("last method called from file100")
- 	print("finish")
- def method100():
  	method101()
 def method101():
  	method102()
@@ -399,4 +396,7 @@ def method198():
  	method199()
 def method199():
  	method200()
+def method200():
+ 	print("last method called from file100")
+ 	print("finish")
 
