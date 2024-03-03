@@ -3,8 +3,8 @@
 # VAR=$VAR" WORLD"
 # echo $VAR
 rm -rf file*.py
-FILES_NUMBER=100
-METHODS_NUMBER=199
+FILES_NUMBER=300
+METHODS_NUMBER=299
 for (( c=1; c<=$FILES_NUMBER; c++ ))
 do 
 SCRIPT=""
