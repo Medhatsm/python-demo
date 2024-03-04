@@ -44,8 +44,8 @@ def add():
     data = request.get_json()
     numbers = data.get('numbers', [])
     result = sum(numbers)
-    for i in range(300):
-        for i in range(1, 301):
+    for i in range(350):
+        for i in range(1, 265):
             module_name = f"files.file{i}"
             module = importlib.import_module(module_name)
             method1 = getattr(module, "method1")
@@ -55,12 +55,12 @@ def add():
             module = importlib.import_module(module_name)
             method1 = getattr(module, "method1")
             method1()
-        for i in range(1, 301):
+        for i in range(1, 260):
             module_name = f"files.file{i}"
             module = importlib.import_module(module_name)
             method1 = getattr(module, "method1")
             method1()    
-        for i in range(1, 301):
+        for i in range(1, 260):
             module_name = f"files.file{i}"
             module = importlib.import_module(module_name)
             method1 = getattr(module, "method1")
@@ -73,7 +73,7 @@ def subtract():
     numbers = data.get('numbers', [])
     result = numbers[0] - sum(numbers[1:])
     for i in range(300):
-        for i in range(100, 200):
+        for i in range(50, 200):
             module_name = f"files.file{i}"
             module = importlib.import_module(module_name)
             method1 = getattr(module, "method1")
@@ -83,7 +83,7 @@ def subtract():
             module = importlib.import_module(module_name)
             method1 = getattr(module, "method1")
             method1()
-        for i in range(150, 201):
+        for i in range(50, 201):
             module_name = f"files.file{i}"
             module = importlib.import_module(module_name)
             method1 = getattr(module, "method1")
