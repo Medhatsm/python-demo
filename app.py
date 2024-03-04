@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 import importlib
+import time
 app = Flask(__name__)
 
 @app.route('/')
@@ -44,27 +45,28 @@ def add():
     data = request.get_json()
     numbers = data.get('numbers', [])
     result = sum(numbers)
-    for i in range(350):
+    for i in range(1):
         for i in range(1, 265):
             module_name = f"files.file{i}"
             module = importlib.import_module(module_name)
             method1 = getattr(module, "method1")
-            method1()    
-        for i in range(1, 200):
-            module_name = f"files.file{i}"
-            module = importlib.import_module(module_name)
-            method1 = getattr(module, "method1")
-            method1()
-        for i in range(1, 260):
-            module_name = f"files.file{i}"
-            module = importlib.import_module(module_name)
-            method1 = getattr(module, "method1")
-            method1()    
-        for i in range(1, 260):
-            module_name = f"files.file{i}"
-            module = importlib.import_module(module_name)
-            method1 = getattr(module, "method1")
-            method1()                   
+            method1() 
+            time.sleep(0.1)   
+        # for i in range(1, 260):
+        #     module_name = f"files.file{i}"
+        #     module = importlib.import_module(module_name)
+        #     method1 = getattr(module, "method1")
+        #     method1()
+        # for i in range(1, 260):
+        #     module_name = f"files.file{i}"
+        #     module = importlib.import_module(module_name)
+        #     method1 = getattr(module, "method1")
+        #     method1()    
+        # for i in range(1, 260):
+        #     module_name = f"files.file{i}"
+        #     module = importlib.import_module(module_name)
+        #     method1 = getattr(module, "method1")
+        #     method1()                   
     return jsonify({'result': result})
 
 @app.route('/subtract', methods=['POST'])
