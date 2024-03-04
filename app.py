@@ -46,22 +46,22 @@ def add():
     result = sum(numbers)
     for i in range(300):
         for i in range(1, 301):
-            module_name = f"file{i}"
+            module_name = f"files.file{i}"
             module = importlib.import_module(module_name)
             method1 = getattr(module, "method1")
             method1()    
         for i in range(1, 200):
-            module_name = f"file{i}"
+            module_name = f"files.file{i}"
             module = importlib.import_module(module_name)
             method1 = getattr(module, "method1")
             method1()
         for i in range(1, 301):
-            module_name = f"file{i}"
+            module_name = f"files.file{i}"
             module = importlib.import_module(module_name)
             method1 = getattr(module, "method1")
             method1()    
         for i in range(1, 301):
-            module_name = f"file{i}"
+            module_name = f"files.file{i}"
             module = importlib.import_module(module_name)
             method1 = getattr(module, "method1")
             method1()                   
@@ -74,22 +74,22 @@ def subtract():
     result = numbers[0] - sum(numbers[1:])
     for i in range(300):
         for i in range(100, 200):
-            module_name = f"file{i}"
+            module_name = f"files.file{i}"
             module = importlib.import_module(module_name)
             method1 = getattr(module, "method1")
             method1()    
         for i in range(1, 200):
-            module_name = f"file{i}"
+            module_name = f"files.file{i}"
             module = importlib.import_module(module_name)
             method1 = getattr(module, "method1")
             method1()
         for i in range(150, 201):
-            module_name = f"file{i}"
+            module_name = f"files.file{i}"
             module = importlib.import_module(module_name)
             method1 = getattr(module, "method1")
             method1()    
         for i in range(200, 250):
-            module_name = f"file{i}"
+            module_name = f"files.file{i}"
             module = importlib.import_module(module_name)
             method1 = getattr(module, "method1")
             method1()       
