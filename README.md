@@ -9,12 +9,10 @@ to run the application :
 python3 -m flask run --host=0.0.0.0
 ```
 to run with Sealights:
+```shell
 export BSID=$(cat buildSessionId.txt)
 export SL_TOKEN=your_lab_token
 sl-python run --token $SL_TOKEN --buildsessionid $BSID python3 -m flask run --host=0.0.0.0
-
-```shell
-python3 -m flask run --host=0.0.0.0
 ```
 
 to run test  :
