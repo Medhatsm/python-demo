@@ -50,23 +50,26 @@ def add():
             module_name = f"files.file{i}"
             module = importlib.import_module(module_name)
             method1 = getattr(module, "method1")
-            method1() 
-            time.sleep(0.1)   
-        # for i in range(1, 260):
-        #     module_name = f"files.file{i}"
-        #     module = importlib.import_module(module_name)
-        #     method1 = getattr(module, "method1")
-        #     method1()
-        # for i in range(1, 260):
-        #     module_name = f"files.file{i}"
-        #     module = importlib.import_module(module_name)
-        #     method1 = getattr(module, "method1")
-        #     method1()    
-        # for i in range(1, 260):
-        #     module_name = f"files.file{i}"
-        #     module = importlib.import_module(module_name)
-        #     method1 = getattr(module, "method1")
-        #     method1()                   
+            method1()
+            time.sleep(0.1)
+        for i in range(1, 260):
+            module_name = f"files.file{i}"
+            module = importlib.import_module(module_name)
+            method1 = getattr(module, "method1")
+            method1()
+            time.sleep(0.1)
+        for i in range(1, 260):
+            module_name = f"files.file{i}"
+            module = importlib.import_module(module_name)
+            method1 = getattr(module, "method1")
+            method1()
+            time.sleep(0.1)
+        for i in range(1, 260):
+            module_name = f"files.file{i}"
+            module = importlib.import_module(module_name)
+            method1 = getattr(module, "method1")
+            method1()
+            time.sleep(0.1)
     return jsonify({'result': result})
 
 @app.route('/subtract', methods=['POST'])
